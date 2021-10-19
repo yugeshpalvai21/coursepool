@@ -3,4 +3,6 @@ class Course < ApplicationRecord
   validates :description, presence: true, length: { minimum: 5, maximum: 5000 }
 
   has_rich_text :description
+
+  belongs_to :user
 end
