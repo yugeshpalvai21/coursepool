@@ -1,5 +1,51 @@
-<h1>Welcome To course pool app</h1>
-<hr>
-<p><%= link_to "Home Page", root_path %></p>
-<p><%= link_to "About Page", about_path %></p>
-<p><%= link_to "Privacy Page", privacy_path%></p>
+<div class="container-xxl text-sm-center p-5 bg-dark text-white">
+    <h1 class="display-2">WelCome To CoursePool</h1>
+    <p class="lead">A MarketPlace To Online Education</p>
+</div>
+<div class="container mt-2">
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <h3 class="pt-2">Popular Courses</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <%= render @courses %>
+  </div>
+  <h3 class="pt-2">Tech Courses</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <%= render @courses %>
+  </div>
+  <h3 class="pt-2">Business Courses</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <%= render @courses %>
+  </div>
+</div>
