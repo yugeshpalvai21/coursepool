@@ -26,3 +26,4 @@ group :development do
 end
 
 gem 'ffaker', '~> 2.20'
+gem 'devise', '~> 4.8'
