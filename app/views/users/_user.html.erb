@@ -7,8 +7,10 @@
       <h6>Courses Created - <%= user.courses.count  %></h6>
     </div>
     <div class="card-footer">
-      <p>Current Ip - <%= user.current_sign_in_ip%></p>
-      <p>Last Sign In Ip - <%= user.last_sign_in_ip %></p>
+      <p>Current Ip - <%= user.current_sign_in_ip.to_s %></p>
+      <p>Last Sign In Ip - <%= user.last_sign_in_ip.to_s %></p>
+      <p>Last Sign In Ip - <%= user.current_sign_in_at %></p>
+      <p>Last Sign In Ip - <%= user.last_sign_in_at %></p>
       <p>No Of Logins - <%= user.sign_in_count %></p>
     </div>
   </div>
