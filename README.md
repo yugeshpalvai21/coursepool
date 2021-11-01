@@ -1,8 +1,13 @@
 # CoursePool - Online Learning Platform
 
-# TECH STACK
+# Pre_Requisites
 
-- Ruby V-3.0
-- Rails V-6.1
-- Bootstrap V-5
-- PostgreSQL
+- Ubuntu OSX (Recommended) 
+- Ruby-3.0 (Using RVM)
+- NodeJs-12 (Using NodeSource) and Yarn
+- PostgreSQL-12
+- Git
+- Code Editor (VSCODE recommended)
+- ZSH and OH-my-ZSH (Recommended)
+- Google Chrome (Recommended for Better Developer Tools)
+
