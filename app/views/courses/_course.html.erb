@@ -4,7 +4,12 @@
       <%= link_to course.title, course_path(course) %>
     </div>
     <div class="card-body">
-      <%= course.description %>
+      <span class="btn btn-sm btn-info"><%= course.level.capitalize %></span>
+      <span class="btn btn-danger btn-sm"><%= course.language.capitalize %></span>
+      <span class="btn btn-sm btn-info"><%= number_to_currency course.price %></span>
+    </div>
+    <div class="card-body">
+      <%= course.short_description %>
     </div>
     <div class="card-footer">
       <h5> By - <strong><%= course.user %></strong></h5>
