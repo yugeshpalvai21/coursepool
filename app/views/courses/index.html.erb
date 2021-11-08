@@ -2,6 +2,30 @@
   <h1 class="text-center"> Courses (<%= @courses.count %>)</h1>
   <hr>
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <%= render @courses %>
+    <div class="col-md-3">
+      <%= search_form_for @q do |f| %>
+        <%= f.label :title_cont %><br>
+        <%= f.search_field :title_cont %><br>
+      
+        <%= f.label :description_cont %><br>
+        <%= f.search_field :description_cont %> <br>
+      
+        <%= f.label :level %><br>
+        <%= f.search_field :level_cont %><br>
+
+        <%= f.label :language %><br>
+        <%= f.search_field :language_cont %><br>
+
+        <%= f.label :price %><br>
+        <%= f.search_field :price_cont %><br>
+      
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <div class="col-md-9">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <%= render @courses %>
+      </div>
+    </div>
   </div>
 </div>

@@ -2,12 +2,11 @@ class CoursesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_course, only: %i[ show edit update destroy ]
 
-  # GET /courses or /courses.json
   def index
-    @courses = Course.all
+    @q = Course.ransack(params[:q])
+    @courses = @q.result(distict: true)
   end
 
-  # GET /courses/1 or /courses/1.json
   def show
   end
 
