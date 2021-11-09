@@ -1,1 +1,8 @@
-<%= @activities.inspect %>
+<div class="container">
+    <h4>Recent Courses Activities</h4>
+    <ul class="list-group">
+        <% @activities.each do |activity| %>
+          <li class="list-group-item"><%= "#{activity.trackable_type} - #{activity.trackable_id} - #{activity.key}" %></li>
+        <% end %>
+    </ul>
+</div>
