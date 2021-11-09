@@ -9,4 +9,7 @@ class Course < ApplicationRecord
 
   extend FriendlyId
   friendly_id :title, use: :slugged
+
+  include PublicActivity::Model
+  tracked
 end
