@@ -7,7 +7,15 @@ class User < ApplicationRecord
 
   has_many :courses
 
+  after_create :assign_default_role
+
   def to_s
     email
+  end
+  
+  def assign_default_role
+    self.add_role(:admin) if User.count == 1
+    self.add_role(:teacher)
+    self.add_role(:student)
   end
 end
