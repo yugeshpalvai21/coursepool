@@ -18,5 +18,8 @@
       <p>Last Sign In Ip - <%= user.last_sign_in_at %></p>
       <p>No Of Logins - <%= user.sign_in_count %></p>
     </div>
+    <div class="card-footer">
+      <%= link_to "EDIT USER ROLES", edit_user_path(user), class: 'btn btn-primary btn-sm' %>
+    </div>
   </div>
 </div>
