@@ -7,6 +7,11 @@
       <h6>Courses Created - <%= user.courses.count  %></h6>
     </div>
     <div class="card-footer">
+      <% user.roles.each do |role| %>
+        <span class="badge bg-info text-dark"><%= role.name %></span>
+      <% end %>
+    </div>
+    <div class="card-footer">
       <p>Current Ip - <%= user.current_sign_in_ip.to_s %></p>
       <p>Last Sign In Ip - <%= user.last_sign_in_ip.to_s %></p>
       <p>Last Sign In Ip - <%= user.current_sign_in_at %></p>
