@@ -1,0 +1,10 @@
+<div class="container">
+  <%= form_with(model: @user) do |form| %>
+    <div class="mb-3">
+      <%= form.collection_check_boxes :role_ids, Role.all, :id, :name, class: 'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit "Submit", class: 'btn btn-lg btn-primary' %>
+    </div>
+  <% end %>
+</div>
