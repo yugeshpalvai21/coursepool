@@ -32,3 +32,4 @@ gem 'letter_opener', '~> 1.7', group: :development
 gem 'ransack', '~> 2.4', '>= 2.4.2'
 gem 'public_activity', '~> 1.6', '>= 1.6.4'
 gem 'rolify', '~> 6.0'
+gem 'pundit', '~> 2.1', '>= 2.1.1'
