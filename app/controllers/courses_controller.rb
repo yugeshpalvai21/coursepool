@@ -17,6 +17,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/1/edit
   def edit
+    authorize @course
   end
 
   # POST /courses or /courses.json
@@ -36,6 +37,7 @@ class CoursesController < ApplicationController
 
   # PATCH/PUT /courses/1 or /courses/1.json
   def update
+    authorize @course
     respond_to do |format|
       if @course.update(course_params)
         format.html { redirect_to @course, notice: "Course was successfully updated." }
