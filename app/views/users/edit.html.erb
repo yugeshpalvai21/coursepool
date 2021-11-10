@@ -1,13 +1,10 @@
 <div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h4>Edit User Roles</h4>
-        </div>
-        <div class="card-body">
-            <p>Form Goes Here...</p>
-        </div>
-        <div class="card-footer">
-            <p>Submit Button Goes Here..</p>
-        </div>
+  <%= form_with(model: @user) do |form| %>
+    <div class="mb-3">
+      <%= form.collection_check_boxes :role_ids, Role.all, :id, :name, class: 'form-control' %>
     </div>
+    <div class="mb-3">
+      <%= form.submit "Submit", class: 'btn btn-lg btn-primary' %>
+    </div>
+  <% end %>
 </div>
