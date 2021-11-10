@@ -15,8 +15,12 @@
       <h5> By - <strong><%= course.user %></strong></h5>
     </div>
     <div class="card-footer">
-      <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-info' %>
-      <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+      <% if current_user && policy(course).edit? %>
+        <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-info' %>
+        <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+      <% else %>
+        <h4>Authers Area</h4>
+      <% end %>
     </div>
   </div>
 </div>
