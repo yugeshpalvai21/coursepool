@@ -1,6 +1,6 @@
 # CoursePool - Online Learning Platform
 
-# Pre_Requisites
+# PreRequisites
 
 - Ubuntu OSX (Recommended) 
 - Ruby-3.0 (Using RVM)
