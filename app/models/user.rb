@@ -21,4 +21,8 @@ class User < ApplicationRecord
     self.add_role(:teacher)
     self.add_role(:student)
   end
+
+  def online?
+    updated_at >= 10.minutes.ago
+  end
 end

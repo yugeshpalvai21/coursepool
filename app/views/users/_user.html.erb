@@ -2,6 +2,11 @@
   <div class="card">
     <div class="card-header">
       <%= link_to user.email, user_path(user) %>
+      <% if user.online? %>
+        <p><i class="fas fa-circle text-success"></i> ON-LINE</p>
+      <% else %>
+      <p><i class="fas fa-circle text-danger"></i> OFF-LINE</p>
+      <% end %>
     </div>
     <div class="card-body">
       <h6>Courses Created - <%= user.courses.count  %></h6>
