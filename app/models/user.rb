@@ -12,6 +12,9 @@ class User < ApplicationRecord
   def to_s
     email
   end
+
+  extend FriendlyId
+  friendly_id :email, use: :slugged
   
   def assign_default_role
     self.add_role(:admin) if User.count == 1
