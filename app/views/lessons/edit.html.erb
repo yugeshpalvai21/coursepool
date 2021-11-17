@@ -1,6 +1,8 @@
-<h1>Editing Lesson</h1>
+<div class="container">
+    <h1>Editing Lesson</h1>
 
-<%= render 'form', lesson: @lesson %>
+    <%= render 'form', lesson: @lesson, course: @course %>
 
-<%= link_to 'Show', @lesson %> |
-<%= link_to 'Back', lessons_path %>
+    <%= link_to 'Show', course_lesson_path(@course, @lesson) %> |
+    <%= link_to 'Back', course_lessons_path %>
+</div>
