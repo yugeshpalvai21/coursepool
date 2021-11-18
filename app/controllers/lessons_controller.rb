@@ -1,4 +1,5 @@
 class LessonsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_course
   before_action :set_lesson, only: %i[ show edit update destroy ]
 
@@ -13,17 +14,19 @@ class LessonsController < ApplicationController
 
   # GET /lessons/new
   def new
-    @lesson = Lesson.new
+    @lesson = @course.lessons.new
+    authorize @lesson
   end
 
   # GET /lessons/1/edit
   def edit
+    authorize @lesson
   end
 
   # POST /lessons or /lessons.json
   def create
     @lesson = @course.lessons.new(lesson_params)
-
+    authorize @lesson
     respond_to do |format|
       if @lesson.save
         format.html { redirect_to course_path(@course), notice: "Lesson was successfully created." }
@@ -35,6 +38,7 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1 or /lessons/1.json
   def update
+    authorize @lesson
     respond_to do |format|
       if @lesson.update(lesson_params)
         format.html { redirect_to course_path(@course), notice: "Lesson was successfully updated." }
@@ -46,6 +50,7 @@ class LessonsController < ApplicationController
 
   # DELETE /lessons/1 or /lessons/1.json
   def destroy
+    authorize @lesson
     @lesson.destroy
     respond_to do |format|
       format.html { redirect_to course_path(@course), notice: "Lesson was successfully destroyed." }
