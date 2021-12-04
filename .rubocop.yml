@@ -1,0 +1,7 @@
+AllCops:
+  SuggestExtensions:
+    rubocop-performance: true
+    rubocop-rails: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
