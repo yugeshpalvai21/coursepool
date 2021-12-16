@@ -4,7 +4,8 @@
       <%= render 'courses/course', course: @course %>
     </div>
     <div class="col-md-6">
+      <%= link_to "Add Lesson", new_course_lesson_path(@course), class: 'btn btn-info btn-lg d-grid gap-2' %>
+      <br/>
       <%= render @lessons, course: @course %>
-      <p><%= link_to "Add Lesson", new_course_lesson_path(@course) %></p>
     </div>
 </div>
