@@ -78,6 +78,9 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.10.0)
+    exception_notification (4.4.3)
+      actionmailer (>= 4.0, < 7)
+      activesupport (>= 4.0, < 7)
     ffaker (2.20.0)
     ffi (1.15.4)
     friendly_id (5.4.2)
@@ -235,6 +238,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise (~> 4.8)
+  exception_notification (~> 4.4, >= 4.4.3)
   ffaker (~> 2.20)
   friendly_id (~> 5.4, >= 5.4.2)
   jbuilder (~> 2.7)
