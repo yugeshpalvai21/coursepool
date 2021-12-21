@@ -1,7 +1,21 @@
 <div class="container">
-  <h1 class="text-center"> Users (<%= @users.count %>)</h1>
-  <hr>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <%= render @users %>
+  <div class="card">
+    <div class="card-header"><h1 class="text-center"> Users (<%= @users.count %>)</h1></div>
+    <div class="card-body">
+      <table class="table table-striped text-center">
+        <thead>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Courses Created</th>
+          <th>Roles</th>
+          <th>Last Signed In</th>
+          <th>Number Of Login</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <%= render @users %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
