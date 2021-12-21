@@ -1,6 +1,6 @@
-# set global defaults and extra variables typically in the pagy.rb initializer
-# they will get merged with every new Pagy instance
-Pagy::DEFAULT[:items]    = 15
+require 'pagy/extras/bootstrap'
+
+Pagy::DEFAULT[:items]    = 10
 Pagy::DEFAULT[:some_var] = 'default value'
 
 # create a new instance (usually done automatically by the #pagy controller method)
