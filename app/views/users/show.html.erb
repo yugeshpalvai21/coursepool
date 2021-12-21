@@ -1,1 +1,21 @@
-<%= render 'users/user', user: @user %>
+<div class="container">
+  <div class="card">
+    <div class="card-header"><h1 class="text-center"> User - (<%= @user.email %>)</h1></div>
+    <div class="card-body">
+      <table class="table table-striped text-center">
+        <thead>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Courses Created</th>
+          <th>Roles</th>
+          <th>Last Signed In</th>
+          <th>Number Of Login</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <%= render 'users/user', user: @user %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
