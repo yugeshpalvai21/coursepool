@@ -1,49 +1,48 @@
-<div class="container">
-  <%= form_with(model: course) do |form| %>
-    <% if course.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+<%= form_with(model: course) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
 
-        <ul>
-          <% course.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="mb-3">
-      <%= form.label :title, class: 'form-label' %>
-      <%= form.text_field :title, class: 'form-control' %>
-    </div>
-
-    <div class="mb-3">
-      <%= form.label :short_description, class: 'form-label' %>
-      <%= form.text_field :short_description, class: 'form-control' %>
-    </div>
-
-    <div class="mb-3">
-      <%= form.label :description, class: 'form-label' %>
-      <%= form.rich_text_area :description, class: 'form-control' %>
-    </div>
-
-    <div class="mb-3">
-      <%= form.label :language, class: 'form-label' %>
-      <%= form.select :language, ["english", "other"], {}, class: 'form-control' %>
-    </div>
-
-    <div class="mb-3">
-      <%= form.label :level, class: 'form-label' %>
-      <%= form.select :level, ["beginner", "intermediate", "advance"], {}, class: 'form-control' %>
-    </div>
-
-    <div class="mb-3">
-      <%= form.label :price, class: 'form-label' %>
-      <%= form.number_field :price, class: 'form-control' %>
-    </div>
-
-    <div class="mb-3">
-      <%= form.submit "Submit", class: 'btn btn-lg btn-primary' %>
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
-</div>
+
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :short_description, class: 'form-label' %>
+    <%= form.text_field :short_description, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, class: 'form-label' %>
+    <%= form.rich_text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :language, class: 'form-label' %>
+    <%= form.select :language, ["english", "other"], {}, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :level, class: 'form-label' %>
+    <%= form.select :level, ["beginner", "intermediate", "advance"], {}, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :price, class: 'form-label' %>
+    <%= form.number_field :price, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "Submit", class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>
+
