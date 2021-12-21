@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  include Pagy::Backend
 
   after_action :update_user_presence, if: :user_signed_in?
 

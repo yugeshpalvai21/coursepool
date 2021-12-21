@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
 
   def index
     @q = Course.ransack(params[:q])
-    @courses = @q.result(distict: true)
+    @pagy, @courses = pagy(@q.result(distict: true))
   end
 
   def show
