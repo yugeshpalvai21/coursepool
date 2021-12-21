@@ -1,17 +1,16 @@
-
-  <div class="card mb-3">
-    <div class="card-header">
-      <%= link_to lesson.title, course_lesson_path(course, lesson) %>
-    </div>
-    <div class="card-body">
-      <%= lesson.content %>
-    </div>
-    <div class="card-footer">
-      <% if current_user && policy(lesson.course).edit? %>
-        <%= link_to 'Edit', edit_course_lesson_path(course, lesson), class: 'btn btn-sm btn-info' %>
-        <%= link_to 'Destroy', course_lesson_path(course,lesson), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
-      <% else %>
-        <h4>Authers Area</h4>
-      <% end %>
-    </div>
+<div class="card mb-3">
+  <div class="card-header">
+    <%= link_to lesson.title, course_lesson_path(course, lesson) %>
   </div>
+  <div class="card-body">
+    <%= lesson.content %>
+  </div>
+  <div class="card-footer">
+    <% if current_user && policy(lesson.course).edit? %>
+      <%= link_to 'Edit', edit_course_lesson_path(course, lesson), class: 'btn btn-sm btn-info' %>
+      <%= link_to 'Destroy', course_lesson_path(course,lesson), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+    <% else %>
+      <h4>Authers Area</h4>
+    <% end %>
+  </div>
+</div>
