@@ -10,4 +10,3 @@
 - Code Editor (VSCODE recommended)
 - ZSH and OH-my-ZSH (Recommended)
 - Google Chrome (Recommended for Better Developer Tools)
--
